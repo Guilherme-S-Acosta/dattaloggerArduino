@@ -31,7 +31,7 @@ void setup()
   //CRIAÇÃO DO CABEÇALHO NO ARQUIVO DO DATALOGGER
   dados = SD.open("teste.txt", FILE_WRITE);
   dados.println("Tempo(s);Temperatura sensor(°C)");
-  dados.close();
+  dados.close();//FECHA O ARQUIVO
   //Serial.begin(9600); //INICIA O MONITOR SERIAL
   delay(1000); //INTERVALO DE 1000 MILISSEGUNDOS
 }
@@ -48,7 +48,7 @@ void loop()
   dados.print(";");
   dados.print(temperatura);
   dados.println();
-  dados.close();
+  dados.close();//FECHA O ARQUIVO
   tempo=tempo+1;
   delay(1000); //INTERVALO DE 1000 MILISSEGUNDOS
 }
